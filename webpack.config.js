@@ -4,6 +4,9 @@ var webpack = require('webpack'),
 
 module.exports = {
     entry:[
+        'script-loader!jquery/dist/jquery.min.js',
+        'script-loader!bootstrap/dist/js/bootstrap.min.js',
+        'style-loader!css-loader!less-loader!./src/styles/bootswatch.less',
         './src/app.jsx'
     ],
     plugins:[
@@ -16,8 +19,7 @@ module.exports = {
         }),
          new webpack.ProvidePlugin({
             '_':'lodash',
-            '$': "jquery",
-            'jQuery': "jquery"
+            '$': "jquery"
         }) 
     ],
     output:{
@@ -38,7 +40,10 @@ module.exports = {
                 },
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/
-            }
+            },
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
         ]
     },
     devtool: 'cheap-module-eval-source-map'

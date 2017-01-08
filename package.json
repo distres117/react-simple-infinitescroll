@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"concurrently --kill-all \"nodemon .\" \"webpack -w\""
+    "dev": "concurrently --kill-all \"nodemon .\" \"webpack -w\""
   },
   "keywords": [],
   "author": "",
@@ -23,13 +23,17 @@
     "babel-register": "^6.18.0",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
     "browser-sync": "^2.18.2",
     "browser-sync-webpack-plugin": "^1.1.3",
     "concurrently": "^3.1.0",
     "cross-env": "^3.1.3",
     "css-loader": "^0.26.1",
     "express": "^4.14.0",
+    "file-loader": "^0.9.0",
     "jquery": "^3.1.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
     "lodash": "^4.17.4",
     "nodemon": "^1.11.0",
     "react": "^15.4.1",
@@ -37,6 +41,9 @@
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0"
   }
 }
