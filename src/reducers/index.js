@@ -8,7 +8,14 @@ const testReducer = (state='',action)=>{
             return state;
     }
 }
+const dataReducer = (state=[], action)=>{
+    if (action.type==='GOT_DATA')
+        return state.concat(action.payload);
+    else
+        return state;
+}
 
 export default combineReducers({
-    testString: testReducer
+    testString: testReducer,
+    tableData: dataReducer
 })

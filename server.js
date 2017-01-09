@@ -1,9 +1,6 @@
-import Express from 'express';
-import path from 'path';
-const app = Express();
 
-app.use(Express.static(path.join(__dirname, 'public')));
-
+import app from './app';
 app.listen(3000, ()=>{
     console.log('Server is listening on 3000');
 });
+
